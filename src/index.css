@@ -1,0 +1,119 @@
+*{
+  padding : 0px;
+  margin : 0px;
+  font-family:Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.parent{
+  min-height: 100vh;
+  width: 100%;
+  padding:30px;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  gap: 100px;
+}
+
+.card{
+  height: 440px;
+  width:380px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding : 10px;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding : 10px;
+}
+.top img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.top button{
+  height: 50px;
+  width: 100px;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 10px;
+}
+
+.center{
+  padding-left: 10px;
+  margin-top: -80px; 
+}
+
+.center span{
+  font-size: small;
+  padding-left: 10px;
+}
+.center div{
+  display: flex;
+  padding-top: 15px;
+  margin-left : -20px;
+}
+
+.center h2{
+  padding: 10px;
+}
+.mid h3{
+  background-color: rgb(193, 189, 189);
+  border-radius: 1px;
+  font-weight: lighter;
+  margin-left: 15px;
+  width: fit-content;
+  padding: 0px 10px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom{
+  border-top: 2px solid rgb(209, 196, 196);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom button{
+  margin-left: 100px;
+  margin-top: 16px;
+  height: 50px;
+  width: 200px;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+}
+#rate{
+  font-size: 22px;
+}
+#city{
+  font-weight: lighter;
+  font-size: medium;
+  white-space: nowrap;
+  padding-top: 3px;
+}
+.bottom div{
+  padding-left:10px;
+}
+
