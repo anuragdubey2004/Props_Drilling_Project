@@ -1,119 +1,134 @@
-*{
-  padding : 0px;
-  margin : 0px;
-  font-family:Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
-
-html, body{
+html, body {
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: black; /* Sets the global background to black */
+  margin: 0;
+  padding: 0;
 }
+
 .parent{
-  min-height: 100vh;
-  width: 100%;
-  padding:30px;
-  margin-left: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-
-  gap: 100px;
+  justify-content: center;
+  gap:80px;
+  padding: 40px;
 }
 
-.card{
+.card {
   height: 440px;
-  width:380px;
+  width: 380px;
   background-color: white;
   border: 1px solid black;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding : 10px;
+  /* Increased padding so text doesn't touch the edges */
+  padding: 25px; 
+  box-sizing: border-box;
 }
-.top{
+
+.top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding : 10px;
+  /* Removed local padding to let the card's padding handle alignment */
 }
-.top img{
-  height: 100px;
-  width: 100px;
+
+.top img {
+  height: 80px; /* Slightly smaller for better proportions */
+  width: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
-.top button{
-  height: 50px;
-  width: 100px;
+
+.top button {
+  /* Removed margin-left: individual buttons shouldn't push themselves; 
+     the 'space-between' in the parent handles this */
+  height: 40px;
+  width: 90px;
   font-weight: bolder;
-  font-size: large;
   border-radius: 10px;
+  /* Added cursor for better UX */
+  cursor: pointer; 
 }
 
-.center{
-  padding-left: 10px;
-  margin-top: -80px; 
-}
-
-.center span{
-  font-size: small;
-  padding-left: 10px;
-}
-.center div{
+.center {
+  /* REMOVED: margin-top: -80px; - This was causing overlapping issues */
   display: flex;
-  padding-top: 15px;
-  margin-left : -20px;
+  flex-direction: column;
+  gap: 10px; /* Adds consistent vertical spacing between Name, Title, and Tags */
+  flex-grow: 1; /* Makes the center section take up available space */
+  padding-top: 20px;
 }
 
-.center h2{
-  padding: 10px;
+.center h1 {
+  font-size: 24px;
+  margin: 0;
 }
-.mid h3{
-  background-color: rgb(193, 189, 189);
-  border-radius: 1px;
-  font-weight: lighter;
-  margin-left: 15px;
+
+.center h2 {
+  font-size: 16px;
+  color: gray;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Container for the tags (Full Time, Senior Level) */
+.center div {
+  display: flex;
+  gap: 10px;
+  /* REMOVED: margin-left: -20px; - Elements should stay inside the card padding */
+  padding-top: 10px;
+}
+
+.mid h3 {
+  background-color: rgb(235, 235, 235); /* Lighter gray for a modern look */
+  border-radius: 5px;
+  font-weight: 500;
   width: fit-content;
-  padding: 0px 10px;
-  height: 30px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 5px 12px; /* Balanced horizontal/vertical padding */
+  font-size: 14px;
+  /* REMOVED: margin-left: 15px; and height: 30px; 
+     Let the text padding determine the size for better indentation */
 }
 
-.bottom{
-  border-top: 2px solid rgb(209, 196, 196);
+.bottom {
+  border-top: 1px solid rgb(230, 230, 230); /* Thinner, lighter line */
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Pushes rate/city to left and button to right */
   align-items: center;
+  padding-top: 20px;
 }
-.bottom button{
-  margin-left: 100px;
-  margin-top: 16px;
-  height: 50px;
-  width: 200px;
-  font-weight: bolder;
-  font-size: large;
-  border-radius: 10px;
+
+.bottom div {
+  /* REMOVED: padding-left: 10px; - Handled by card padding */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#rate {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#city {
+  color: gray;
+  font-weight: normal;
+}
+
+.bottom button {
+  /* REMOVED: margin-left: 100px; - This was ruining the indentation.
+     'justify-content: space-between' in the parent handles this now */
+  height: 45px;
+  width: 140px;
   background-color: black;
   color: white;
-  text-align: center;
-  white-space: nowrap;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
 }
-#rate{
-  font-size: 22px;
-}
-#city{
-  font-weight: lighter;
-  font-size: medium;
-  white-space: nowrap;
-  padding-top: 3px;
-}
-.bottom div{
-  padding-left:10px;
-}
-
