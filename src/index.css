@@ -1,7 +1,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  background-color: black; /* Sets the global background to black */
+  background-color: black;
   margin: 0;
   padding: 0;
 }
@@ -23,7 +23,6 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* Increased padding so text doesn't touch the edges */
   padding: 25px; 
   box-sizing: border-box;
 }
@@ -32,33 +31,28 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Removed local padding to let the card's padding handle alignment */
 }
 
 .top img {
-  height: 80px; /* Slightly smaller for better proportions */
+  height: 80px;
   width: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .top button {
-  /* Removed margin-left: individual buttons shouldn't push themselves; 
-     the 'space-between' in the parent handles this */
   height: 40px;
   width: 90px;
   font-weight: bolder;
   border-radius: 10px;
-  /* Added cursor for better UX */
   cursor: pointer; 
 }
 
 .center {
-  /* REMOVED: margin-top: -80px; - This was causing overlapping issues */
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Adds consistent vertical spacing between Name, Title, and Tags */
-  flex-grow: 1; /* Makes the center section take up available space */
+  gap: 10px;
+  flex-grow: 1; 
   padding-top: 20px;
 }
 
@@ -77,35 +71,30 @@ html, body {
   gap: 10px;
 }
 
-/* Container for the tags (Full Time, Senior Level) */
 .center div {
   display: flex;
   gap: 10px;
-  /* REMOVED: margin-left: -20px; - Elements should stay inside the card padding */
   padding-top: 10px;
 }
 
 .mid h3 {
-  background-color: rgb(235, 235, 235); /* Lighter gray for a modern look */
+  background-color: rgb(235, 235, 235); 
   border-radius: 5px;
   font-weight: 500;
   width: fit-content;
-  padding: 5px 12px; /* Balanced horizontal/vertical padding */
+  padding: 5px 12px; 
   font-size: 14px;
-  /* REMOVED: margin-left: 15px; and height: 30px; 
-     Let the text padding determine the size for better indentation */
 }
 
 .bottom {
-  border-top: 1px solid rgb(230, 230, 230); /* Thinner, lighter line */
+  border-top: 1px solid rgb(230, 230, 230); 
   display: flex;
-  justify-content: space-between; /* Pushes rate/city to left and button to right */
+  justify-content: space-between; 
   align-items: center;
   padding-top: 20px;
 }
 
 .bottom div {
-  /* REMOVED: padding-left: 10px; - Handled by card padding */
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -122,8 +111,6 @@ html, body {
 }
 
 .bottom button {
-  /* REMOVED: margin-left: 100px; - This was ruining the indentation.
-     'justify-content: space-between' in the parent handles this now */
   height: 45px;
   width: 140px;
   background-color: black;
